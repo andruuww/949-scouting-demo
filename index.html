@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scouting Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="lib/qrcode.min.js"></script>
+    <!-- <script defer src="./qrcodescanner.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script> -->
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <script src="lib/html2canvas.min.js"></script>
+    <script defer src="./main.js"></script>
+</head>
+<body>
+    <form id="form" method="post">
+        <h1>Pit Scouting</h1>
+
+        <div class="form-element">
+            <span>Scouter Name</span>
+            <input type="text" id="name" placeholder="Name" required>
+        </div>
+
+        <div class="form-element">
+            <span>Team Number</span>
+            <input type="number" id="teamNumber" placeholder="949" required>
+        </div>
+
+        <div class="form-element">
+            <span>Number of Wheels</span>
+            <input type="number" id="wheelNumber" placeholder="Number of Wheels" required>
+        </div>
+
+        <div class="form-element">
+            <span>Drive Team Experience</span>
+            <input type="number" id="driveTeamExperience" placeholder="Days of Practice" required>
+        </div>
+
+        <div class="form-element">
+            <span>Drivetrain</span>
+            <select>
+                <option value="swerve">Swerve</option>
+                <option value="Tank">Tank</option>
+            </select>
+        </div>
+
+        <button type="submit">Generate</button>
+    </form>
+
+    <div id="output">
+        <div id="data"></div>
+        <span id="team-label"></span>
+    </div>
+    
+
+    <!-- <div id="qr-reader" style="width: 600px"></div> -->
+</body>
+</html>
